@@ -1,0 +1,2 @@
+/usr/bin/ar qc libUniquePtr.a  CMakeFiles/UniquePtr.dir/UniquePtr.cpp.o
+/usr/bin/ranlib libUniquePtr.a

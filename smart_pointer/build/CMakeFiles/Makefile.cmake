@@ -79,6 +79,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "src/CMakeFiles/UniquePtr.dir/DependInfo.cmake"
   "src/CMakeFiles/SharedPtr.dir/DependInfo.cmake"
+  "test/CMakeFiles/runUniquePtrTests.dir/DependInfo.cmake"
   "test/CMakeFiles/runSharedPtrTests.dir/DependInfo.cmake"
   )

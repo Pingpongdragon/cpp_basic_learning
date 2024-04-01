@@ -5,17 +5,17 @@ template<typename T>
 class SharedPtr
 {
 public:
-    SharedPtr() : ptr(nullptr),ref_count(new std::atomic<uint>(0)){}
+    SharedPtr() noexcept: ptr(nullptr),ref_count(new std::atomic<uint>(0)){}
 
-    explicit SharedPtr(T* p) : ptr(p) , ref_count(new std::atomic<uint>(1)){}
+    explicit SharedPtr(T* p) noexcept: ptr(p) , ref_count(new std::atomic<uint>(1)){}
 
-    SharedPtr(const SharedPtr<T> & other) : ptr(other.get()),ref_count(other.ref_count)
+    SharedPtr(const SharedPtr<T> & other) noexcept: ptr(other.get()),ref_count(other.ref_count)
     {
         add_ref();
     }
 
     template<typename U>
-    SharedPtr(const SharedPtr<T> & other) : ptr(other.get()),ref_count(other.ref_count)
+    SharedPtr(const SharedPtr<T> & other) noexcept: ptr(other.get()),ref_count(other.ref_count)
     {
         add_ref();
     }
@@ -38,7 +38,7 @@ public:
         release();
     }
 
-    SharedPtr<T> & operator=(const SharedPtr<T> & other)
+    SharedPtr<T> & operator=(const SharedPtr<T> & other) noexcept
     {
         release();
         ptr = other.get();
@@ -48,7 +48,7 @@ public:
     }
 
     template<typename U>
-    SharedPtr<T> & operator=(const SharedPtr<U> & other)
+    SharedPtr<T> & operator=(const SharedPtr<U> & other) noexcept
     {
         release();
         ptr = other.get();
@@ -57,52 +57,56 @@ public:
         return *this;
     }
 
-    T& operator*() const{
+    T& operator*() const noexcept{
         return *ptr;
     }
 
-    T* operator->() const{
+    T* operator->() const noexcept{
         return ptr;
     }
 
-    explicit operator bool() const{
+    explicit operator bool() const noexcept{
         return ptr != nullptr;
     }
 
-    bool operator==(const SharedPtr<T>& other) const{
+    bool operator==(const SharedPtr<T>& other) const noexcept{
         return ptr == other.ptr;
     }
 
-    bool operator!=(const SharedPtr<T>& other) const{
+    bool operator!=(const SharedPtr<T>& other) const noexcept{
         return !(*this == other);
     }
 
-    bool unique() const {
+    bool unique() const noexcept{
         return ref_count->load() == 1;
     }
 
-    T* get() const{
+    T* get() const noexcept{
         return ptr;
     }
 
-    std::size_t use_count() const{
+    std::size_t use_count() const noexcept{
+        if (ref_count) {
         return ref_count->load();
+        } else {
+            return 0;
+        }
     }
 
-    void reset(){
+    void reset() noexcept{
         release();
         ptr = nullptr;
         ref_count = new std::atomic<uint>(0);
     }
 
     template<typename U>
-    void reset(U* p) {
+    void reset(U* p) noexcept{
         release();
         ptr = p;
         ref_count = new std::atomic<uint>(1);
     }
 
-    void swap(SharedPtr<T>& other) {
+    void swap(SharedPtr<T>& other) noexcept{
         std::swap(ptr, other.ptr);
         std::swap(ref_count, other.ref_count);
     }

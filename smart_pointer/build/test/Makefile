@@ -68,6 +68,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -79,17 +90,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/runUniquePtrTests.dir/rule:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runUniquePtrTests.dir/rule
+.PHONY : test/CMakeFiles/runUniquePtrTests.dir/rule
+
+# Convenience name for target.
+runUniquePtrTests: test/CMakeFiles/runUniquePtrTests.dir/rule
+
+.PHONY : runUniquePtrTests
+
+# fast build rule for target.
+runUniquePtrTests/fast:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/build
+.PHONY : runUniquePtrTests/fast
+
+# Convenience name for target.
 test/CMakeFiles/runSharedPtrTests.dir/rule:
 	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runSharedPtrTests.dir/rule
 .PHONY : test/CMakeFiles/runSharedPtrTests.dir/rule
@@ -198,6 +213,33 @@ SharedPtrTests.cpp.s:
 	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f test/CMakeFiles/runSharedPtrTests.dir/build.make test/CMakeFiles/runSharedPtrTests.dir/SharedPtrTests.cpp.s
 .PHONY : SharedPtrTests.cpp.s
 
+UniquePtrTests.o: UniquePtrTests.cpp.o
+
+.PHONY : UniquePtrTests.o
+
+# target to build an object file
+UniquePtrTests.cpp.o:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/UniquePtrTests.cpp.o
+.PHONY : UniquePtrTests.cpp.o
+
+UniquePtrTests.i: UniquePtrTests.cpp.i
+
+.PHONY : UniquePtrTests.i
+
+# target to preprocess a source file
+UniquePtrTests.cpp.i:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/UniquePtrTests.cpp.i
+.PHONY : UniquePtrTests.cpp.i
+
+UniquePtrTests.s: UniquePtrTests.cpp.s
+
+.PHONY : UniquePtrTests.s
+
+# target to generate assembly for a file
+UniquePtrTests.cpp.s:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/UniquePtrTests.cpp.s
+.PHONY : UniquePtrTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,8 +247,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... runUniquePtrTests"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
@@ -214,6 +257,9 @@ help:
 	@echo "... SharedPtrTests.o"
 	@echo "... SharedPtrTests.i"
 	@echo "... SharedPtrTests.s"
+	@echo "... UniquePtrTests.o"
+	@echo "... UniquePtrTests.i"
+	@echo "... UniquePtrTests.s"
 .PHONY : help
 
 

@@ -137,6 +137,7 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
+src/all: src/CMakeFiles/UniquePtr.dir/all
 src/all: src/CMakeFiles/SharedPtr.dir/all
 
 .PHONY : src/all
@@ -147,6 +148,7 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
+src/clean: src/CMakeFiles/UniquePtr.dir/clean
 src/clean: src/CMakeFiles/SharedPtr.dir/clean
 
 .PHONY : src/clean
@@ -155,6 +157,7 @@ src/clean: src/CMakeFiles/SharedPtr.dir/clean
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
+test/all: test/CMakeFiles/runUniquePtrTests.dir/all
 test/all: test/CMakeFiles/runSharedPtrTests.dir/all
 
 .PHONY : test/all
@@ -165,6 +168,7 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
+test/clean: test/CMakeFiles/runUniquePtrTests.dir/clean
 test/clean: test/CMakeFiles/runSharedPtrTests.dir/clean
 
 .PHONY : test/clean
@@ -177,7 +181,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=7,8 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -204,7 +208,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=5,6 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +235,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -258,7 +262,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=9,10 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -277,6 +281,33 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/UniquePtr.dir
+
+# All Build rule for target.
+src/CMakeFiles/UniquePtr.dir/all:
+	$(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/depend
+	$(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=3,4 "Built target UniquePtr"
+.PHONY : src/CMakeFiles/UniquePtr.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/UniquePtr.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/UniquePtr.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/UniquePtr.dir/rule
+
+# Convenience name for target.
+UniquePtr: src/CMakeFiles/UniquePtr.dir/rule
+
+.PHONY : UniquePtr
+
+# clean rule for target.
+src/CMakeFiles/UniquePtr.dir/clean:
+	$(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/clean
+.PHONY : src/CMakeFiles/UniquePtr.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/SharedPtr.dir
@@ -306,6 +337,35 @@ src/CMakeFiles/SharedPtr.dir/clean:
 .PHONY : src/CMakeFiles/SharedPtr.dir/clean
 
 #=============================================================================
+# Target rules for target test/CMakeFiles/runUniquePtrTests.dir
+
+# All Build rule for target.
+test/CMakeFiles/runUniquePtrTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+test/CMakeFiles/runUniquePtrTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+test/CMakeFiles/runUniquePtrTests.dir/all: src/CMakeFiles/SharedPtr.dir/all
+	$(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/depend
+	$(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=15,16 "Built target runUniquePtrTests"
+.PHONY : test/CMakeFiles/runUniquePtrTests.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/runUniquePtrTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runUniquePtrTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/runUniquePtrTests.dir/rule
+
+# Convenience name for target.
+runUniquePtrTests: test/CMakeFiles/runUniquePtrTests.dir/rule
+
+.PHONY : runUniquePtrTests
+
+# clean rule for target.
+test/CMakeFiles/runUniquePtrTests.dir/clean:
+	$(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/clean
+.PHONY : test/CMakeFiles/runUniquePtrTests.dir/clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/runSharedPtrTests.dir
 
 # All Build rule for target.
@@ -314,7 +374,7 @@ test/CMakeFiles/runSharedPtrTests.dir/all: _deps/googletest-build/googletest/CMa
 test/CMakeFiles/runSharedPtrTests.dir/all: src/CMakeFiles/SharedPtr.dir/all
 	$(MAKE) -f test/CMakeFiles/runSharedPtrTests.dir/build.make test/CMakeFiles/runSharedPtrTests.dir/depend
 	$(MAKE) -f test/CMakeFiles/runSharedPtrTests.dir/build.make test/CMakeFiles/runSharedPtrTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=11,12 "Built target runSharedPtrTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/CMakeFiles --progress-num=13,14 "Built target runSharedPtrTests"
 .PHONY : test/CMakeFiles/runSharedPtrTests.dir/all
 
 # Build rule for subdir invocation for target.

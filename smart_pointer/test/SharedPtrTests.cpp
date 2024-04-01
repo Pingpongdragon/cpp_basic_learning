@@ -23,6 +23,7 @@ TEST(SharedPtrTest, TestMoveConstructor) {
     EXPECT_EQ(*ptr3, 5);
     EXPECT_EQ(ptr3.get(), ptr2.get());
     EXPECT_EQ(ptr1.get(), nullptr);
+    EXPECT_EQ(ptr1.use_count(), 0);
     EXPECT_EQ(ptr2.use_count(), 2);
     EXPECT_EQ(ptr3.use_count(), 2);
 }

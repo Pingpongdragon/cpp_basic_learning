@@ -209,6 +209,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named UniquePtr
+
+# Build rule for target.
+UniquePtr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UniquePtr
+.PHONY : UniquePtr
+
+# fast build rule for target.
+UniquePtr/fast:
+	$(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/build
+.PHONY : UniquePtr/fast
+
+#=============================================================================
 # Target rules for targets named SharedPtr
 
 # Build rule for target.
@@ -220,6 +233,19 @@ SharedPtr: cmake_check_build_system
 SharedPtr/fast:
 	$(MAKE) -f src/CMakeFiles/SharedPtr.dir/build.make src/CMakeFiles/SharedPtr.dir/build
 .PHONY : SharedPtr/fast
+
+#=============================================================================
+# Target rules for targets named runUniquePtrTests
+
+# Build rule for target.
+runUniquePtrTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runUniquePtrTests
+.PHONY : runUniquePtrTests
+
+# fast build rule for target.
+runUniquePtrTests/fast:
+	$(MAKE) -f test/CMakeFiles/runUniquePtrTests.dir/build.make test/CMakeFiles/runUniquePtrTests.dir/build
+.PHONY : runUniquePtrTests/fast
 
 #=============================================================================
 # Target rules for targets named runSharedPtrTests
@@ -250,7 +276,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... UniquePtr"
 	@echo "... SharedPtr"
+	@echo "... runUniquePtrTests"
 	@echo "... runSharedPtrTests"
 .PHONY : help
 

@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/UniquePtr.dir/rule:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/UniquePtr.dir/rule
+.PHONY : src/CMakeFiles/UniquePtr.dir/rule
+
+# Convenience name for target.
+UniquePtr: src/CMakeFiles/UniquePtr.dir/rule
+
+.PHONY : UniquePtr
+
+# fast build rule for target.
+UniquePtr/fast:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/build
+.PHONY : UniquePtr/fast
+
+# Convenience name for target.
 src/CMakeFiles/SharedPtr.dir/rule:
 	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/SharedPtr.dir/rule
 .PHONY : src/CMakeFiles/SharedPtr.dir/rule
@@ -198,6 +213,33 @@ SharedPtr.cpp.s:
 	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f src/CMakeFiles/SharedPtr.dir/build.make src/CMakeFiles/SharedPtr.dir/SharedPtr.cpp.s
 .PHONY : SharedPtr.cpp.s
 
+UniquePtr.o: UniquePtr.cpp.o
+
+.PHONY : UniquePtr.o
+
+# target to build an object file
+UniquePtr.cpp.o:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/UniquePtr.cpp.o
+.PHONY : UniquePtr.cpp.o
+
+UniquePtr.i: UniquePtr.cpp.i
+
+.PHONY : UniquePtr.i
+
+# target to preprocess a source file
+UniquePtr.cpp.i:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/UniquePtr.cpp.i
+.PHONY : UniquePtr.cpp.i
+
+UniquePtr.s: UniquePtr.cpp.s
+
+.PHONY : UniquePtr.s
+
+# target to generate assembly for a file
+UniquePtr.cpp.s:
+	cd /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build && $(MAKE) -f src/CMakeFiles/UniquePtr.dir/build.make src/CMakeFiles/UniquePtr.dir/UniquePtr.cpp.s
+.PHONY : UniquePtr.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,10 +252,14 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... UniquePtr"
 	@echo "... SharedPtr"
 	@echo "... SharedPtr.o"
 	@echo "... SharedPtr.i"
 	@echo "... SharedPtr.s"
+	@echo "... UniquePtr.o"
+	@echo "... UniquePtr.i"
+	@echo "... UniquePtr.s"
 .PHONY : help
 
 

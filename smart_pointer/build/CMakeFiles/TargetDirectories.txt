@@ -32,10 +32,12 @@
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/src/CMakeFiles/list_install_components.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/src/CMakeFiles/rebuild_cache.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/src/CMakeFiles/edit_cache.dir
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/src/CMakeFiles/UniquePtr.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/src/CMakeFiles/SharedPtr.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/install/strip.dir
-/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/install/local.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/edit_cache.dir
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/install/local.dir
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/runUniquePtrTests.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/install.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/list_install_components.dir
 /media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/test/CMakeFiles/rebuild_cache.dir
