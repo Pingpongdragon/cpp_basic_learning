@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule
+/media/ljy/data/cpplearning/cpp_basic_learning/smart_pointer/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule

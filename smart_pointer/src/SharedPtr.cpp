@@ -42,8 +42,8 @@ public:
     {
         release();
         ptr = other.get();
-        refCount = other.refCount;
-        addRef();
+        ref_count = other.ref_count;
+        add_ref();
         return *this;
     }
 
@@ -52,8 +52,8 @@ public:
     {
         release();
         ptr = other.get();
-        refCount = other.refCount;
-        addRef();
+        ref_count = other.ref_count;
+        add_ref();
         return *this;
     }
 
@@ -77,6 +77,35 @@ public:
         return !(*this == other);
     }
 
+    bool unique() const {
+        return ref_count->load() == 1;
+    }
+
+    T* get() const{
+        return ptr;
+    }
+
+    std::size_t use_count() const{
+        return ref_count->load();
+    }
+
+    void reset(){
+        release();
+        ptr = nullptr;
+        ref_count = new std::atomic<uint>(0);
+    }
+
+    template<typename U>
+    void reset(U* p) {
+        release();
+        ptr = p;
+        ref_count = new std::atomic<uint>(1);
+    }
+
+    void swap(SharedPtr<T>& other) {
+        std::swap(ptr, other.ptr);
+        std::swap(ref_count, other.ref_count);
+    }
     
 
 private :
@@ -100,10 +129,6 @@ private :
             ptr = nullptr;
             ref_count = nullptr;
         }
-    }
-
-    T* get() const{
-        return ptr;
     }
 
 };
