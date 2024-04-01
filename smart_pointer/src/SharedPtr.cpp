@@ -1,6 +1,7 @@
 #include <atomic>
 #include <memory>
 
+using uint = unsigned int;
 template<typename T>
 class SharedPtr
 {
