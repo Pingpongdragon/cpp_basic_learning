@@ -1,0 +1,5 @@
+if(EXISTS "/media/ljy/data/cpplearning/cpp_basic_learning/data_structure/build/test/runArrayTests[1]_tests.cmake")
+  include("/media/ljy/data/cpplearning/cpp_basic_learning/data_structure/build/test/runArrayTests[1]_tests.cmake")
+else()
+  add_test(runArrayTests_NOT_BUILT runArrayTests_NOT_BUILT)
+endif()
